@@ -10,6 +10,10 @@ class DrawerScreen extends StatefulWidget {
 class _DrawerScreenState extends State<DrawerScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 250),
+      color: Colors.green,
+
+    );
   }
 }
