@@ -22,9 +22,11 @@ class _HomeScreenState extends State<HomeScreen> {
       color: Colors.white,
       child: Column(
         children: [
+
           SizedBox(
             height: 50,
           ),
+
           Container(
             margin: EdgeInsets.symmetric(horizontal: 20),
             child: Row(
@@ -41,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             isDrawerOpen = false;
                           });
                         },
-                        icon: Icon(Icons.undo))
+                        icon: Icon(Icons.arrow_back_ios))
                     : IconButton(
                         icon: Icon(Icons.menu),
                         onPressed: () {
@@ -72,6 +74,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 CircleAvatar(),
               ],
             ),
+          ),
+
+          Container(
+            child: TextField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.transparent),
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    borderSide: BorderSide(color: Colors.blue),
+                ),
+                prefixIcon: Icon(Icons.search, color: Colors.blue,),
+                hintText: "Search Crypto..",
+                filled: true,
+                fillColor: Colors.grey[200]
+              ),
+            ),
+            padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
           )
         ],
       ),
