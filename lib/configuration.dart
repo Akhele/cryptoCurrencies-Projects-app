@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 Color primaryColor = Color(0xff416d6d);
 
+List<BoxShadow> ListShadow = [
+  BoxShadow(color : (Colors.grey[300])!, blurRadius: 30, offset: Offset(0,10)),
+];
+
 List<Map> cryptos = [
   { 'Name' : 'Bitcoin', 'Symbol' : 'BTC', 'iconPath' : 'images/cryptos/BTC.png' },
   { 'Name' : 'Ethereum', 'Symbol' : 'ETH', 'iconPath' : 'images/cryptos/ETH.png' },
@@ -16,6 +20,3 @@ List<Map> cryptos = [
   { 'Name' : 'SHIBA INU', 'Symbol' : 'SHIB', 'iconPath' : 'images/cryptos/SHIB.png' },
 ];
 
-List<BoxShadow> ListShadow = [
-  BoxShadow(color : Colors.grey, blurRadius: 30, offset: Offset(0,10)),
-];

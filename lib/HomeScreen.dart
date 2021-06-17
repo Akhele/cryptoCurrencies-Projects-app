@@ -107,11 +107,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column (
                     children: [
                       Container(
-                        height: 50,
-                        width: 50,
-                        child: Image.asset(cryptos[index]['iconPath']),
+
+                        padding: EdgeInsets.all(10),
+                        margin: EdgeInsets.only(right: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          boxShadow: ListShadow,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Image.asset(cryptos[index]['iconPath'],height: 50,width: 50,),
                       ),
-                      Text(cryptos[index]['Name'])
+                      Container(
+                        margin: EdgeInsets.only(right: 20),
+                        child: Text(cryptos[index]['Name']),
+                      )
+
+
+
+
                     ],
                   ),
                 );
