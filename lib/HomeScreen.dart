@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'configuration.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -63,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         IconButton(
                           icon: Icon(Icons.admin_panel_settings),
-                          color: Colors.green,
+                          color: primaryColor,
                           onPressed: () {},
                         ),
                         Text("Definition"),
@@ -85,16 +86,39 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30)),
-                    borderSide: BorderSide(color: Colors.blue),
+                    borderSide: BorderSide(color: primaryColor),
                 ),
-                prefixIcon: Icon(Icons.search, color: Colors.blue,),
+                prefixIcon: Icon(Icons.search, color: primaryColor,),
                 hintText: "Search Crypto..",
                 filled: true,
                 fillColor: Colors.grey[200]
               ),
             ),
             padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+          ),
+
+          Container(
+            height: 120,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: cryptos.length,
+              itemBuilder: (context,index){
+                return Container(
+                  child: Column (
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        child: Image.asset(cryptos[index]['iconPath']),
+                      ),
+                      Text(cryptos[index]['Name'])
+                    ],
+                  ),
+                );
+              },
+            ),
           )
+
         ],
       ),
     );

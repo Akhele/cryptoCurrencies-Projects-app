@@ -1,3 +1,4 @@
+import 'package:crypto_projects/configuration.dart';
 import 'package:flutter/material.dart';
 
 class DrawerScreen extends StatefulWidget {
@@ -12,7 +13,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 250),
-      color: Colors.blue,
+      color: primaryColor,
 
     );
   }
