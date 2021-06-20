@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 Color primaryColor = Color(0xff416d6d);
 
 List<BoxShadow> ListShadow = [
-  BoxShadow(color : (Colors.grey[300])!, blurRadius: 30, offset: Offset(0,10)),
+  BoxShadow(color : Colors.grey, blurRadius: 30, offset: Offset(5,10)),
 ];
 
 List<Map> cryptos = [
