@@ -196,8 +196,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                               Align(
-                                child: Image.asset(
-                                  'images/cryptos/SHIB.png',
+                                child: Hero(
+                                  tag: 0,
+                                  child: Image.asset(
+                                    'images/cryptos/SHIB.png',
+                                  ),
                                 ),
                               )
                             ],

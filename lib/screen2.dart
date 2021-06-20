@@ -60,7 +60,10 @@ class _Screen2State extends State<Screen2> {
             margin: EdgeInsets.only(top: 100),
             child: Align(
               alignment: Alignment.topCenter,
-              child: Image.asset("images/cryptos/BTC.png"),
+              child: Hero(
+                tag: 0,
+                  child: Image.asset("images/cryptos/SHIB.png")
+              ),
             ),
           ),
           Align(
@@ -101,7 +104,7 @@ class _Screen2State extends State<Screen2> {
                       margin: EdgeInsets.symmetric(horizontal: 20),
                       height: 60,
                       decoration: BoxDecoration(
-                        boxShadow: ListShadow,
+                          boxShadow: ListShadow,
                           color: primaryColor,
                           borderRadius: BorderRadius.circular(20)),
                       child: Container(
