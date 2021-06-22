@@ -1,5 +1,6 @@
 import 'package:crypto_projects/screen2.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'configuration.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -111,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 //mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Favorites :',
+                    'Trending :',
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -133,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           margin: EdgeInsets.only(right: 20),
                           decoration: BoxDecoration(
                             color: Colors.transparent,
-                            boxShadow: ListShadow,
+                            //boxShadow: ListShadow,
                             borderRadius: BorderRadius.circular(50),
                           ),
                           child: Image.asset(
@@ -210,7 +211,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Expanded(
-                          child: Container(
                             child: Container(
                               margin: EdgeInsets.only(top: 60, bottom: 20),
                               decoration: BoxDecoration(
@@ -219,8 +219,41 @@ class _HomeScreenState extends State<HomeScreen> {
                                   borderRadius: BorderRadius.only(
                                       topRight: Radius.circular(20),
                                       bottomRight: Radius.circular(20))),
+                              child: Container(
+                                padding: EdgeInsets.only(left: 15),
+                                child: Column(
+
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                                      children: <Widget>[
+                                        SizedBox(width: 1,),
+                                        Text('Shiba INU', style: TextStyle(fontSize: 25, color: Colors.black,),),
+                                        IconButton(icon: Icon(FontAwesomeIcons.bitcoin, color: primaryColor),onPressed: (){},),
+                                      ],
+                                    ),
+                                    Text('Project Informations'),
+                                    Text('2 years old'),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        IconButton(
+                                          icon: Icon(FontAwesomeIcons.dollarSign, color: primaryColor),
+                                          onPressed: (){},
+                                        ),
+                                        Text('1.000.000', style: TextStyle(fontSize: 20),),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+
                             ),
-                          ),
                         )
                       ],
                     ),
@@ -257,7 +290,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Expanded(
-                        child: Container(
                           child: Container(
                             margin: EdgeInsets.only(top: 60, bottom: 20),
                             decoration: BoxDecoration(
@@ -266,9 +298,44 @@ class _HomeScreenState extends State<HomeScreen> {
                                 borderRadius: BorderRadius.only(
                                     topRight: Radius.circular(20),
                                     bottomRight: Radius.circular(20))),
+
+                            child: Container(
+                              padding: EdgeInsets.only(left: 15),
+                              child: Column(
+
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                                    children: <Widget>[
+                                      SizedBox(width: 1,),
+                                      Text('Shiba INU', style: TextStyle(fontSize: 25, color: Colors.black,),),
+                                      IconButton(icon: Icon(FontAwesomeIcons.bitcoin, color: primaryColor),onPressed: (){},),
+                                    ],
+                                  ),
+                                  Text('Project Informations'),
+                                  Text('2 years old'),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      IconButton(
+                                        icon: Icon(FontAwesomeIcons.dollarSign, color: primaryColor),
+                                        onPressed: (){},
+                                      ),
+                                      Text('1.000.000', style: TextStyle(fontSize: 20),),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+
                           ),
                         ),
-                      )
                     ],
                   ),
                 ),
@@ -302,7 +369,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Expanded(
-                child: Container(
                   child: Container(
                     margin: EdgeInsets.only(top: 60, bottom: 20),
                     decoration: BoxDecoration(
@@ -311,9 +377,43 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.only(
                             topRight: Radius.circular(20),
                             bottomRight: Radius.circular(20))),
+
+                    child: Container(
+                      padding: EdgeInsets.only(left: 15),
+                      child: Column(
+
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                            children: <Widget>[
+                              SizedBox(width: 1,),
+                              Text('Bitcoin', style: TextStyle(fontSize: 25, color: Colors.black,),),
+                              IconButton(icon: Icon(FontAwesomeIcons.bitcoin, color: primaryColor),onPressed: (){},),
+                            ],
+                          ),
+                          Text('Project Informations'),
+                          Text('9 years old'),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: <Widget>[
+                              IconButton(
+                                icon: Icon(FontAwesomeIcons.dollarSign, color: primaryColor),
+                                onPressed: (){},
+                              ),
+                              Text('1.000.000', style: TextStyle(fontSize: 20),),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+
                   ),
                 ),
-              )
             ],
           ),
         ),

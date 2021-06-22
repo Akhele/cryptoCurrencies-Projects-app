@@ -1,5 +1,6 @@
 import 'package:crypto_projects/configuration.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'configuration.dart';
 
@@ -60,10 +61,8 @@ class _Screen2State extends State<Screen2> {
             margin: EdgeInsets.only(top: 100),
             child: Align(
               alignment: Alignment.topCenter,
-              child: Hero(
-                tag: 0,
-                  child: Image.asset("images/cryptos/SHIB.png")
-              ),
+              child:
+                  Hero(tag: 0, child: Image.asset("images/cryptos/SHIB.png")),
             ),
           ),
           Align(
@@ -75,6 +74,42 @@ class _Screen2State extends State<Screen2> {
                   boxShadow: ListShadow,
                   color: Colors.white70,
                   borderRadius: BorderRadius.circular(20)),
+
+              child: Container(
+                padding: EdgeInsets.only(left: 15),
+                child: Column(
+
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                      children: <Widget>[
+                        SizedBox(width: 1,),
+                        Text('Shiba INU', style: TextStyle(fontSize: 25, color: Colors.black,),),
+                        IconButton(icon: Icon(FontAwesomeIcons.bitcoin, color: primaryColor),onPressed: (){},),
+                      ],
+                    ),
+                    Text('Project Informations'),
+                    Text('2 years old'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: <Widget>[
+                        IconButton(
+                          icon: Icon(FontAwesomeIcons.dollarSign, color: primaryColor),
+                          onPressed: (){},
+                        ),
+                        Text('1.000.000', style: TextStyle(fontSize: 20),),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
+
             ),
           ),
           Align(
